@@ -1,0 +1,97 @@
+<div class="container">
+  <div class="traffic-light-top">
+    <div class="light red" [ngClass]="{ active: lightStates.top === 'red' }"></div>
+    <div class="light yellow" [ngClass]="{ active: lightStates.top === 'yellow' }"></div>
+    <div class="light green" [ngClass]="{ active: lightStates.top === 'green' }"></div>
+  </div>
+  <div class="traffic-light-left">
+    <div class="light red" [ngClass]="{ active: lightStates.left === 'red' }"></div>
+    <div class="light yellow" [ngClass]="{ active: lightStates.left === 'yellow' }"></div>
+    <div class="light green" [ngClass]="{ active: lightStates.left === 'green' }"></div>
+  </div>
+  <div class="traffic-light-right">
+    <div class="light red" [ngClass]="{ active: lightStates.right === 'red' }"></div>
+    <div class="light yellow" [ngClass]="{ active: lightStates.right === 'yellow' }"></div>
+    <div class="light green" [ngClass]="{ active: lightStates.right === 'green' }"></div>
+  </div>
+  <div class="traffic-light-bottom">
+    <div class="light red" [ngClass]="{ active: lightStates.bottom === 'red' }"></div>
+    <div class="light yellow" [ngClass]="{ active: lightStates.bottom === 'yellow' }"></div>
+    <div class="light green" [ngClass]="{ active: lightStates.bottom === 'green' }"></div>
+  </div>
+
+  <button
+    class="button-top"
+    (click)="crossStreet('top')"
+    [disabled]="getButtonState('top')"
+  >
+    пресичане
+  </button>
+  <button
+    class="button-left"
+    (click)="crossStreet('left')"
+    [disabled]="getButtonState('left')"
+  >
+    пресичане
+  </button>
+  <button
+    class="button-right"
+    (click)="crossStreet('right')"
+    [disabled]="getButtonState('right')"
+  >
+    пресичане
+  </button>
+  <button
+    class="button-bottom"
+    (click)="crossStreet('bottom')"
+    [disabled]="getButtonState('bottom')"
+  >
+    пресичане
+  </button>
+
+  <div class="road1"></div>
+  <div class="road2"></div>
+  <div class="road1-border"></div>
+  <div class="road2-border"></div>
+
+  <div class="crossroad1">
+    <div class="zebra-line1"></div>
+    <div class="zebra-line1"></div>
+    <div class="zebra-line1"></div>
+    <div class="zebra-line1"></div>
+    <div class="zebra-line1"></div>
+    <div class="zebra-line1"></div>
+  </div>
+  <div class="crossroad2">
+    <div class="zebra-line2"></div>
+    <div class="zebra-line2"></div>
+    <div class="zebra-line2"></div>
+    <div class="zebra-line2"></div>
+    <div class="zebra-line2"></div>
+    <div class="zebra-line2"></div>
+  </div>
+  <div class="crossroad3">
+    <div class="zebra-line3"></div>
+    <div class="zebra-line3"></div>
+    <div class="zebra-line3"></div>
+    <div class="zebra-line3"></div>
+    <div class="zebra-line3"></div>
+    <div class="zebra-line3"></div>
+  </div>
+  <div class="crossroad4">
+    <div class="zebra-line4"></div>
+    <div class="zebra-line4"></div>
+    <div class="zebra-line4"></div>
+    <div class="zebra-line4"></div>
+    <div class="zebra-line4"></div>
+    <div class="zebra-line4"></div>
+  </div>
+
+  <button
+    class="accident-button"
+    (click)="AccidentButton()"
+    [disabled]="isAccidentButtonDisabled"
+  >
+    Авария
+  </button>
+</div>

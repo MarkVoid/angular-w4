@@ -1,0 +1,230 @@
+.container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.traffic-light-top, .traffic-light-bottom, .traffic-light-left, .traffic-light-right {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: #4b4b4b;
+    border-radius: 10px;
+    z-index: 3;
+}
+.traffic-light-top {
+    top: 5%;
+    left:50%;
+    width: 300px;
+    height: 80px;
+    transform: translateX(-50%);
+}
+
+.traffic-light-bottom {
+    bottom: 30px;
+    left: 50%;
+    width: 300px;
+    height: 80px;
+    transform: translateX(-50%);
+}
+
+.traffic-light-left {
+    top: 50%;
+    left: 30px;
+    width: 80px;
+    height: 300px;
+    flex-direction: column;
+    transform: translateY(-50%);
+}
+
+.traffic-light-right {
+    top: 50%;
+    right: 30px;
+    width: 80px;
+    height: 300px;
+    flex-direction: column;
+    transform: translateY(-50%);
+}
+
+.light {
+    width: 60px;
+    height: 60px;
+    background-color: #555;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.light.active {
+    box-shadow: 0 0 10px 5px rgba(255, 255, 0, 0.5);
+}
+
+.light.red {
+    background-color: red;
+  }
+  
+  .light.green {
+    background-color: green;
+  }
+  
+  .light.yellow {
+    background-color: yellow;
+  }
+
+.accident-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 30px;
+    background-color: #9e1e1e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.accident-button:hover {
+    background-color: #7a0e0e;
+}
+
+.button-top, .button-bottom, .button-left, .button-right {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 120px;
+    height: 40px;
+    margin: 10px;
+    color: white;
+    background-color: #cc00ff;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 4;
+}
+
+.button-top:hover, .button-bottom:hover, .button-left:hover, .button-right:hover {
+    background-color: #650081;
+}
+.button-top {
+    top: 10px;
+    left:50%;
+    transform: translateX(-260%);
+}
+
+.button-bottom {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(+150%);
+}
+
+.button-left {
+    top: 50%;
+    left: 300px;
+    transform: translateY(-55%);
+}
+
+.button-right {
+    top: 50%;
+    right: 300px;
+    transform: translateY(-55%);
+}
+
+.road1, .road2, .road1-border, .road2-border{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    background-color:rgb(0, 0, 0);
+    z-index: 0;
+}
+.road1 {
+    width: 100%;
+    height: 200px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+.road1-border {
+    width: 100%;
+    height: 200px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 30px solid grey;
+    z-index:0;
+}
+.road2 {
+    height: 100%;
+    width: 200px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.road2-border {
+    height: 100%;
+    width: 200px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 30px solid grey;
+    z-index:0;
+}
+.crossroad1 {
+    position: absolute;
+    width: 75px;
+    height: 200px;
+    background-color: #000000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-260%, -50%);
+    z-index: 2;
+}
+.crossroad2 {
+    position: absolute;
+    width: 75px;
+    height: 200px;
+    background-color: #000000;
+    top: 50%;
+    left: 50%;
+    transform: translate(+155%, -50%);
+    z-index: 2;
+}
+.crossroad3 {
+    display:flex;
+    flex-direction: row;
+    position: absolute;
+    width: 200px;
+    height: 75px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -250%);
+    z-index: 2;
+}
+.crossroad4 {
+    display:flex;
+    flex-direction: row;
+    position: absolute;
+    width: 200px;
+    height: 75px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, +150%);
+    z-index: 2;
+}
+.zebra-line1, .zebra-line2 {
+    width: 75px;
+    height: 20px;
+    background-color: white;
+    margin: 10px 0;
+}
+.zebra-line3, .zebra-line4 {
+    width: 23px;
+    height: 70px;
+    background-color: white;
+    margin: 0 5px;
+}
